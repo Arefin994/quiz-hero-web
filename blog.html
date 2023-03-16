@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        common: ["Rubik", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
 </head>
+
 <body>
-    <div>
-        <h3>Q-1: What is the difference between map, filter, find?</h3>
-        <p></p>
-        <h3>Q-2: What is the difference between local Storage, section Storage and Cookies?</h3>
-        <p></p>
-        <h3>Q-3: What is event loop? How does it work?</h3>
-        <p></p>
+    <div class="bg-yellow-300 m-14 rounded-full">
+        <div class="justify-center items-center p-32 ">
+            <h1 class="text-3xl text-center text-violet-800 underline underline-offset-4 
+            ">Question-Answer</h1>
+            <h3 class="text-violet-600">Q-1: What is the difference between map, filter, find?</h3>
+            <p>
+                <strong class="text-sky-800 italic">map:</strong> It transforms each element by applying a function to it then returns a new unit with the transformed values. <br>
+                <strong class="text-sky-800 italic">filter:</strong> This selects elements based on a condition by applying a function to each element of returns a new one with the elements that meet the condition(s). <br>
+                <strong class="text-sky-800 italic">find:</strong> returns the index of the first element in array/object that satisfies a/some condition(s).
+            </p>
+            <h3 class="text-violet-600">Q-2: What is the difference between local Storage, section Storage and Cookies?
+            </h3>
+            <p>
+                <strong class="text-sky-800 italic">Local Storage:</strong> stores key-values in the browser's storage that stays even after the browser is closed. <br>
+                <strong class="text-sky-800 italic">Session Storage:</strong> stores key-values  in the browser's storage that are cleared when the browser is closed. <br>
+                <strong class="text-sky-800 italic">Cookies:</strong> stores small data on the client-side that can be accessed by both the client-side and server-side. You can set an expiration date also. 
+            </p>
+            <h3 class="text-violet-600">Q-3: What is event loop? How does it work?</h3>
+            <p>
+                The <strong class="text-sky-800 italic">event loop</strong>  allows the
+                runtime environment tob handle multiple tasks in an asynchronous way. It continuously check the call stack for tasks to execute. If there are no tasks in the call stack, it checks the task queue for new tasks. If there are tasks in the queue, it pushes them onto the call stack to be executed.
+            </p>
+            <h3 class="text-violet-600">Q-4: What quizTimer function does?</h3>
+            <p>This function takes a parameter and and if the parameter is true  then it runs clearInterval function. If false it runs setInterval function. This function updates the numbers displayed in the screen through html. If the time is over 60 seconds then it will use tex-red-700 tail-wind class at then remove it to get blipping affect.  </p>
+            <h3 class="text-violet-600">Q-5: What chooseQuiz function does?</h3>
+            <p>The function first checks if the question exists. If it exists, then search the index of the  answer. Then updates the object at that index with the new answer using splice method. If the it doesn't exists then it add new object to answer array. Then it calls displayAnswer function to display the answers that was updated. </p>
+        </div>
     </div>
 </body>
 </html>
