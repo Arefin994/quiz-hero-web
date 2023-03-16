@@ -1,4 +1,3 @@
-// global variable declaration
 let count = 0;
 let timer;
 let quizData;
@@ -48,7 +47,6 @@ const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
   const data = await res.json();
   quizData = data;
-  console.log(data)
   displayQuiz(quizData);
 
 };
@@ -61,7 +59,7 @@ const displayQuiz = (quizData) => {
   }
   console.log(quizData);
 
-  quizData.forEach((quizData,i) => {
+  quizData.forEach((quiz,i) => {
     quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
@@ -177,10 +175,10 @@ document.querySelector("#submit").addEventListener ("click", () => {
       <div>${item.status}</div>
       <div>${item.examTime}</div>
       </div>`
-      )
-      ?.join("")}`
-      : ""
-  }
+          )
+          ?.join("")}`
+        : ""
+      }
   </div>
   `;
 
